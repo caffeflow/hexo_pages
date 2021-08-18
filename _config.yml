@@ -1,0 +1,142 @@
+# 下面依次介绍hexo各个文件或者目录的用途：
+
+# _config.yml站点配置文件，很多全局配置都在这个文件中。
+# package.json 应用数据。从它可以看出hexo版本信息，以及它所默认或者说依赖的一些组件。
+# scaffolds 模版文件。当你创建一篇新的文章时，hexo会依据模版文件进行创建，主要用在你想在每篇文章都添加一些共性的内容的情况下。
+# scripts 放脚本的文件夹， 就是放js文件的地方
+# source 这个文件夹就是放文章的地方了，除了文章还有一些主要的资源，比如文章里的图片，文件等等东西。这个文件夹最好定期做一个备份，丢了它，整个站点就废了。
+# themes 主题文件夹。
+#
+#
+# hexo s --debug
+# hexo clean
+# hexo clean && hexo deploy
+# hexo s
+# hexo g
+
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site 站点配置
+title: panda # 网站标题
+subtitle: "life is life" #网站副标题
+description: "欢迎来此讨论与分享" # 网站描述
+keywords: python,pytorch,ML,linux # 网站关键字
+author: Jia # 你的名字
+language: zh-CN # 网站的语言 # 可选值en｜zh-CN等
+timezone: Asia/Shanghai # 网站时区
+
+# URL # 这是可选配置
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://caffeflow.github.io/ # 网址，显示在搜索引擎的结果中
+permalink: :year/:month/:day/:title/ # 永久链接格式
+permalink_defaults: # 永久链接中各部分的默认值
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source # 资源文件夹，它用来存放内容
+public_dir: public # 它用来存放生成站点的静态文件 命令hexo clean会删除它
+tag_dir: tags # 标签文件夹
+archive_dir: archives # 归档文件夹
+category_dir: categories # 分类文件夹
+code_dir: downloads/code # 代码文件夹
+i18n_dir: :lang # 国际化(i18n)文件夹
+skip_render: # 跳过渲染的文件(source_dir目录下)
+  - robots.txt
+  - animate/*
+  - highlight/*
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post # post|draft|page
+titlecase: false # Transform title into titlecase # # 标题首字母大写
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ""
+filename_case: 0 # 转化文件名大小写 0 不转 1 小写 2 大写
+render_drafts: false # 是否渲染显示_drafts目录下的文章（草稿文件）
+post_asset_folder: false # # 为每个post配置一个同名asset文件夹，存储图片等
+relative_link: false # 链接显示为相对地址
+future: true # 是否渲染显示未来日期的文章
+highlight:
+  enable: true # 高亮代码快
+  line_number: true # 行号
+  auto_detect: true # 自动检测代码语言
+  tab_replace: ""
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ""
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ""
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized # 默认分类，默认无分类
+category_map: # 中英字段映射，以防当文章的分类写为中文字段时，对应的路径也是中文字段而无法打开url。
+  编程: programming
+  读书: book
+  生活: life
+  其他: other
+tag_map:
+  生活: life
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format 时间 / 时间格式
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: "mtime"
+
+# Pagination 分页
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page # 分页目录
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions 扩展
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next # 选择themes目录下的主题
+
+# Deployment 一键部署配置
+## Docs: https://hexo.io/docs/one-command-deployment
+##
+## npm install hexo-deployer-git --save
+## hexo clean && hexo deploy
+deploy:
+  type: git
+  repo: https://github.com/caffeflow/caffeflow.github.io.git
+  branch: main
+  message: Site updated:{{ now('YYYY-MM-DD HH:mm:ss') }}
+
+# 本地搜索
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
