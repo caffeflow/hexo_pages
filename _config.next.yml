@@ -156,9 +156,9 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/caffeflow || fab fa-github
-  E-Mail: mailto:xujia028@qq.com || fa fa-envelope
-  Yuque: https://www.yuque.com/theta || fa fa-globe
+  GitHub: https://github.com/xxx || fab fa-github
+  E-Mail: mailto:xxx@qq.com || fa fa-envelope
+  Yuque: https://www.yuque.com/xxx || fa fa-globe
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -620,11 +620,11 @@ livere_uid: # <your_uid>
 # npm i --save gitalk
 gitalk:
   enable: true
-  github_id: caffeflow # GitHub repo owner
+  github_id: xxx # GitHub repo owner
   repo: comment # Repository name to store issues
-  client_id: 3adc3333a31b6f93b79c # GitHub Application Client ID
-  client_secret: 915acecd86c6e16adcb1cbd4fefdb7266b2fa8bb # GitHub Application Client Secret
-  admin_user: caffeflow # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  client_id: xxx # GitHub Application Client ID
+  client_secret: xxx # GitHub Application Client Secret
+  admin_user: xxx # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # When the official proxy is not available, you can change it to your own proxy address
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token # This is official proxy adress

@@ -29,7 +29,6 @@ timezone: Asia/Shanghai # 网站时区
 
 # URL # 这是可选配置
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://caffeflow.github.io/ # 网址，显示在搜索引擎的结果中
 permalink: :year/:month/:day/:title/ # 永久链接格式
 permalink_defaults: # 永久链接中各部分的默认值
 pretty_urls:
@@ -130,7 +129,7 @@ theme: next # 选择themes目录下的主题
 ## hexo clean && hexo deploy
 deploy:
   type: git
-  repo: https://github.com/caffeflow/caffeflow.github.io.git
+  repo: 这里填你的github-pages仓库
   branch: main
   message: Site updated:{{ now('YYYY-MM-DD HH:mm:ss') }}
 
